@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spot: one
+  user: one
+  source: MyString
+  comment: MyText
+
+two:
+  spot: two
+  user: two
+  source: MyString
+  comment: MyText

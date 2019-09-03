@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spot: one
+  user: one
+  date: 2019-08-27
+  flow: 1
+  height: 9.99
+  pref_charc: MyString
+  quality: MyString
+  description: MyText
+
+two:
+  spot: two
+  user: two
+  date: 2019-08-27
+  flow: 1
+  height: 9.99
+  pref_charc: MyString
+  quality: MyString
+  description: MyText

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  description: MyText
+  date: 2019-08-27
+  completed: false
+  alt_spot_1: MyString
+  alt_spot_2: MyString
+  alt_spot_3: MyString
+  alt_spot_4: MyString
+
+two:
+  name: MyString
+  location: MyString
+  description: MyText
+  date: 2019-08-27
+  completed: false
+  alt_spot_1: MyString
+  alt_spot_2: MyString
+  alt_spot_3: MyString
+  alt_spot_4: MyString
