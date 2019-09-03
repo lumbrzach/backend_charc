@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  lat: 9.99
+  long: 9.99
+  country: MyString
+  city: MyString
+  state: MyString
+  quality: MyString
+  river: MyString
+  river_section: MyString
+  gauge_url: MyString
+  min_flow: 1
+  max_flow: 1
+  ideal_flow: 1
+  description: MyText
+  water_temp: 1
+  current_cfs: 1
+  current_height: 9.99
+  gauge_name: MyString
+  gauge_num: 1
+
+two:
+  name: MyString
+  lat: 9.99
+  long: 9.99
+  country: MyString
+  city: MyString
+  state: MyString
+  quality: MyString
+  river: MyString
+  river_section: MyString
+  gauge_url: MyString
+  min_flow: 1
+  max_flow: 1
+  ideal_flow: 1
+  description: MyText
+  water_temp: 1
+  current_cfs: 1
+  current_height: 9.99
+  gauge_name: MyString
+  gauge_num: 1
