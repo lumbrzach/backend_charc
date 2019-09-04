@@ -13,7 +13,7 @@ class Api::V1::JournalsController < ApplicationController
 
     def create
         
-        @journal = Journal.create(journal_params)
+        @journal = Journal.create(user_id: current_user.id, spot_id: journal_params[:spot_id], date: journal_params[:date], flow: journal_params[:flow], height: journal_params[:height], pref_charc: journal_params[:pref_charc], quality: journal_params[:quality], description: journal_params[:description])
         if @journal.valid?
             render json: { journal: @journal }, status: :created
         else

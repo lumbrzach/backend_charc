@@ -12,7 +12,7 @@ class Api::V1::PhotosController < ApplicationController
     end
 
     def create
-        @photo = Photo.create(photo_params)
+        @photo = Photo.create(user_id: current_user.id, spot_id: photo_params[:spot_id], source: photo_params[:source], comment: photo_params[:comment])
         if @photo.valid?
             render json: { photo: @photo }, status: :created
         else
