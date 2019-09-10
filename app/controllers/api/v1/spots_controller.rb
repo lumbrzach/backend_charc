@@ -43,6 +43,6 @@ class Api::V1::SpotsController < ApplicationController
 
     private
     def spot_params
-        params.require(:spot).permit(:name, :lat, :long, :country, :city, :state, :quality, :river, :river_section, :gauge_url, :min_flow, :max_flow, :ideal_flow, :description, :water_temp, :current_cfs, :current_height, :gauge_name, :gauge_num, :region)
+        params.require(:spot).permit(:name, :lat, :long, :country, :city, :state, :quality, :river, :river_section, :gauge_url, :min_flow, :max_flow, :ideal_flow, :description, :water_temp, :current_cfs, :current_height, :gauge_name, :gauge_num, :region, :pH, :turbidity)
     end
 end

@@ -4,11 +4,13 @@ class CreateJournals < ActiveRecord::Migration[5.2]
       t.references :spot, foreign_key: true
       t.references :user, foreign_key: true
       t.date :date
-      t.integer :flow
-      t.decimal :height
+      t.string :river_level
       t.string :pref_charc
       t.string :quality
-      t.text :description
+      t.text :explore_notes
+      t.string :photo_url
+      t.string :username
+
 
       t.timestamps
     end

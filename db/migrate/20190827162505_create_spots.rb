@@ -18,8 +18,11 @@ class CreateSpots < ActiveRecord::Migration[5.2]
       t.string :water_temp
       t.string :current_cfs
       t.string :current_height
+      t.string :turbidity
+      t.string :pH
       t.string :gauge_name
-      t.integer :gauge_num
+      t.string :gauge_num
+      t.string :region
 
       t.timestamps
     end

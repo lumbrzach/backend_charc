@@ -5,7 +5,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :location
       t.text :description
       t.date :date
-      t.boolean :completed
+      t.boolean :completed, default: false
+      t.string :photo_url
       t.string :alt_spot_1
       t.string :alt_spot_2
       t.string :alt_spot_3

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_182005) do
+ActiveRecord::Schema.define(version: 2019_08_27_165709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(version: 2019_08_28_182005) do
     t.string "location"
     t.text "description"
     t.date "date"
-    t.boolean "completed"
+    t.boolean "completed", default: false
+    t.string "photo_url"
     t.string "alt_spot_1"
     t.string "alt_spot_2"
     t.string "alt_spot_3"
@@ -42,11 +43,12 @@ ActiveRecord::Schema.define(version: 2019_08_28_182005) do
     t.bigint "spot_id"
     t.bigint "user_id"
     t.date "date"
-    t.integer "flow"
-    t.decimal "height"
+    t.string "river_level"
     t.string "pref_charc"
     t.string "quality"
-    t.text "description"
+    t.text "explore_notes"
+    t.string "photo_url"
+    t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["spot_id"], name: "index_journals_on_spot_id"
@@ -82,11 +84,13 @@ ActiveRecord::Schema.define(version: 2019_08_28_182005) do
     t.string "water_temp"
     t.string "current_cfs"
     t.string "current_height"
+    t.string "turbidity"
+    t.string "pH"
     t.string "gauge_name"
-    t.integer "gauge_num"
+    t.string "gauge_num"
+    t.string "region"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "region"
   end
 
   create_table "user_events", force: :cascade do |t|
@@ -110,6 +114,8 @@ ActiveRecord::Schema.define(version: 2019_08_28_182005) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
+    t.string "first_name"
+    t.string "last_name"
     t.string "avatar"
     t.string "location"
     t.string "email"
