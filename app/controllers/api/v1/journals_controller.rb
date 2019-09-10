@@ -13,7 +13,7 @@ class Api::V1::JournalsController < ApplicationController
 
     def create
         
-        @journal = Journal.create(user_id: current_user.id, spot_id: journal_params[:spot_id], username: current_user.username, date: journal_params[:date], river_level: journal_params[:river_level], pref_charc: journal_params[:pref_charc], quality: journal_params[:quality], explore_notes: journal_params[:explore_notes], photo_url: journal_params[:photo_url])
+        @journal = Journal.create(user_id: current_user.id, spot_id: journal_params[:spot_id], username: current_user.username, date: journal_params[:date], river_level: journal_params[:river_level], pref_charc: journal_params[:pref_charc], quality: journal_params[:quality], explore_notes: journal_params[:explore_notes])
         if @journal.valid?
             render json: { journal: @journal }, status: :created
         else
@@ -44,6 +44,6 @@ class Api::V1::JournalsController < ApplicationController
 
     private
     def journal_params
-        params.require(:journal).permit(:user_id, :spot_id, :username, :date, :river_level, :pref_charc, :quality, :explore_notes, :photo_url)
+        params.require(:journal).permit(:user_id, :spot_id, :username, :date, :river_level, :pref_charc, :quality, :explore_notes)
     end
 end
