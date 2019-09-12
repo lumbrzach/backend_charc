@@ -13,7 +13,8 @@ class Api::V1::UserEventsController < ApplicationController
         
         @user_event = UserEvent.create(event_id: user_event_params[:event_id], user_id: current_user.id)
         if @user_event.valid?
-            render json: { user_event: @user_event }, status: :created
+            @event = Event.find_by(id: user_event_params[:event_id])
+            render json: { event: @event }, include: ['users', 'spots'], status: :created
         else
             render json: { error: 'Failed to save the user_event' }, status: :not_accepted
         end

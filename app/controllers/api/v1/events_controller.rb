@@ -12,9 +12,11 @@ class Api::V1::EventsController < ApplicationController
     end
 
     def create
+
         @event = Event.create(event_params)
         if @event.valid?
-            render json: { event: @event }, status: :created
+            EventSpot.create(event_id: @event.id, spot_id: params[:spot_id])
+            render json: { event: @event }, include: ['users', 'spots'], status: :created
         else
             render json: { error: 'Failed to save the event' }, status: :not_accepted
         end
