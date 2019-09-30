@@ -15,7 +15,7 @@ class Api::V1::EventSpotsController < ApplicationController
         if @event_spot.valid?
             render json: { event_spot: @event_spot }, status: :created
         else
-            render json: { error: 'Failed to save the event_spot' }, status: :not_accepted
+            render json: { error: 'Failed to save the event' }, status: :not_accepted
         end
     end
 
