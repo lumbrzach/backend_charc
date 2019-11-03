@@ -3,7 +3,8 @@ class Api::V1::SpotsController < ApplicationController
 
     def index
         @spots = Spot.all
-        render json: @spots.to_json( include: [:events, :photos, :journals, :users] )
+        # render json: @spots.to_json( include: [:events, :photos, :journals, :users] )
+        render json: @spots
     end
 
     def show
